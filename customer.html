@@ -1,0 +1,30 @@
+{% extends "Base.html" %}
+{% block title %}
+	會員註冊
+{% endblock %}
+{% block Content %}
+	<div>
+		<form action="" method="post">
+
+			{% csrf_token %}
+
+			姓名:<input type="text" name="username"/>
+			<p></p>
+			性別:<input type="radio" checked name="sex" value="M">男<input type="radio" name="sex" value="F">女
+			<p></p>
+			生日:<input type="text" name="birthday"/>
+			<p></p>
+			Email:<input type="Email" name="email"/>
+			<p></p>
+			電話:<input type="text" name="phone"/>
+			<p></p>
+			地址:<input type="text" name="address"/>
+			<p></p>
+			密碼:<input type="password" name="pwd"/>
+			<p></p>
+			<input type="submit" name="註冊"/>
+			<p></p>
+		</form>
+
+	</div>
+{% endblock %}
